@@ -3,7 +3,8 @@
 # Basics
 add-apt-repository -y ppa:ubuntu-lxc/lxd-stable
 apt-get update
-apt-get install -y build-essential git
+apt-get install -y build-essential git zsh
+echo 'source /root/.profile' >> /root/.zshenv
 
 # Go
 curl -o /root/golang.tar.gz https://storage.googleapis.com/golang/go1.7.4.linux-amd64.tar.gz

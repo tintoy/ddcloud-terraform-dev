@@ -40,7 +40,10 @@ resource "digitalocean_droplet" "dev" {
 
 	# Initial provisioning.
 	provisioner "remote-exec" {
-		script = "files/init.sh"
+		scripts = [
+			"files/init.sh",
+			"files/ohmyz.sh"
+		]
 
 		connection {
 			type 		= "ssh"
