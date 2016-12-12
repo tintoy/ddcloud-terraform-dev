@@ -1,0 +1,8 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+credentials.tf
+
+# Mac
+.DS_Store
