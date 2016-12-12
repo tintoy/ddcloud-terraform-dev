@@ -21,6 +21,7 @@ source /root/.profile
 echo 'Fetching Terraform...'
 go get -u github.com/hashicorp/terraform
 cd /root/go/src/github.com/hashicorp/terraform
+git checkout v0.8.0-rc3
 echo 'Building Terraform...'
 make dev
 
