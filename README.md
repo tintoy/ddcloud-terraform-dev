@@ -12,10 +12,3 @@ Then run:
 
 * `cd terraform`
 * `terraform apply`
-* `cd ../ansible`
-* `ansible all -m ping`
-* `ansible-playbook terraform-dev.yml`
-
-Optionally, you can also run:
-
-* `ansible-playbook ansible.yml` (install Ansible)

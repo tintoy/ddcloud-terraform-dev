@@ -1,0 +1,3 @@
+providers {
+    ddcloud = "/root/go/src/github.com/DimensionDataResearch/dd-cloud-compute-terraform/_bin/terraform-provider-ddcloud"
+}
