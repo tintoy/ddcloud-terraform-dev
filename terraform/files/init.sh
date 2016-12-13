@@ -1,9 +1,14 @@
 #!/bin/bash
 
-# Basics
-add-apt-repository -y ppa:ubuntu-lxc/lxd-stable
+# Package repositories
 apt-get update
-apt-get install -y build-essential git zsh
+apt-get install -y software-properties-common
+apt-add-repository -y ppa:ansible/ansible
+add-apt-repository -y ppa:ubuntu-lxc/lxd-stable
+
+# Basics
+apt-get update
+apt-get install -y build-essential git zsh python-dev python-pip
 echo 'source /root/.profile' >> /root/.zshenv
 git config --global credential.helper 'store'
 
@@ -34,3 +39,9 @@ cd /root/go/src/github.com/DimensionDataResearch/dd-cloud-compute-terraform
 git clone --recursive https://github.com/DimensionDataResearch/dd-cloud-compute-terraform.git .
 echo 'Building CloudControl plugin for Terraform...'
 make clean dev
+
+# Ansible
+echo 'Installing Ansible...'
+apt-get install -y ansible
+
+echo 'Done!'
